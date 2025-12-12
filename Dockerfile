@@ -15,7 +15,7 @@ WORKDIR /src
 COPY ["microservice-employee.csproj", "."]
 RUN dotnet restore "./microservice-employee.csproj"
 COPY . .
-WORKDIR "/src/microservice-employee"
+WORKDIR "/src"
 RUN dotnet build "./microservice-employee.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage

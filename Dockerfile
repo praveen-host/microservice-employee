@@ -12,7 +12,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["microservice-employee.csproj", "microservice-employee/"]
+COPY ["microservice-employee.csproj"]
 RUN dotnet restore "./microservice-employee.csproj"
 COPY . .
 WORKDIR "/src/microservice-employee"

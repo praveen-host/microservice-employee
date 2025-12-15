@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_praveen_host_microservice_employee_1765774430299-pr-trigger-input-set
+  identifier: Build_praveen_host_microservice_employee_1765774430299prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: DemoProject002
+  pipeline:
+    identifier: Build_praveen_host_microservice_employee_1765774430299
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
